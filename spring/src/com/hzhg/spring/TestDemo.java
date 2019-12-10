@@ -1,11 +1,11 @@
-package main.pojo;
+package com.hzhg.spring;
 
+import com.hzhg.pojo.Emp;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestDemo {
-
     @Test
     public void test() {
         //1. 获取到一个上下问对象
@@ -15,5 +15,4 @@ public class TestDemo {
         //3. 测试
         System.out.println(emp);
     }
-
 }

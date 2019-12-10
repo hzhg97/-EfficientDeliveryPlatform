@@ -1,4 +1,4 @@
-package main.pojo;
+package com.hzhg.pojo;
 
 public class Emp {
     private int uid;
