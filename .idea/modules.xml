@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/-EfficientDeliveryPlatform.iml" filepath="$PROJECT_DIR$/-EfficientDeliveryPlatform.iml" />
       <module fileurl="file://$PROJECT_DIR$/warehouse/mybatis.iml" filepath="$PROJECT_DIR$/warehouse/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
     </modules>
   </component>
 </project>

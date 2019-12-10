@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+     bean标签就表示一个对象
+     id：对象的引用
+     class ： 对象的类型
+     ioc:通过spring给你创建对象
+     di ： dependence injection ： 依赖注入，在ioc的过程中将对象的属性注入值
+     -->
+    <bean id="emp" class="main.pojo.Emp">
+        <property name="uid" value="1" />
+        <property name="uname" value="刘嘉豪" />
+        <property name="sal" value="100000" />
+    </bean>
+
+</beans>
