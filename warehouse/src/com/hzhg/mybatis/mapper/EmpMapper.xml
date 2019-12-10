@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hzhg.mybatis.mapper.EmpMapper">
+
+    <!--
+        namespace：类的完整路径名
+        id:方法名称
+        resultType：返回值类型
+        parameterType ： 方法参数类型
+     -->
+   <select id="list" resultType="com.hzhg.mybatis.pojo.Emp">
+       select * from t_emp
+   </select>
+
+
+
+   <select id="get" parameterType="int" resultType="com.hzhg.mybatis.pojo.Emp">
+       select * from t_emp where uid=#{uid}
+   </select>
+
+</mapper>
