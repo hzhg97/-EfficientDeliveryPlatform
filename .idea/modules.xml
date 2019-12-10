@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/-EfficientDeliveryPlatform.iml" filepath="$PROJECT_DIR$/-EfficientDeliveryPlatform.iml" />
-      <module fileurl="file://$PROJECT_DIR$/warehouse/warehouse.iml" filepath="$PROJECT_DIR$/warehouse/warehouse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/warehouse/mybatis.iml" filepath="$PROJECT_DIR$/warehouse/mybatis.iml" />
     </modules>
   </component>
 </project>
