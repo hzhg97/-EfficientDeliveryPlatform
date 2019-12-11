@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans ">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!--
      bean标签就表示一个对象
@@ -13,10 +17,40 @@ http://www.springframework.org/schema/beans ">
      ioc:通过spring给你创建对象
      di ： dependence injection ： 依赖注入，在ioc的过程中将对象的属性注入值
      -->
+    <!--
     <bean id="emp" class="com.hzhg.pojo.Emp">
         <property name="uid" value="1"/>
         <property name="uname" value="刘嘉豪"/>
         <property name="sal" value="100000"/>
     </bean>
+-->
 
+    <!-- 开启注解方式开发-->
+    <!--<context:annotation-config />  -->
+
+    <!-- 添加注解扫描组件 -->
+    <!--<context:component-scan base-package="com.hzhg.springaop" />-->
+
+
+    <bean id="book" class="com.hzhg.pojo.Book" />
+
+    <!-- advice -->
+    <bean id="bookAdvice" class="com.hzhg.pojo.BookAdvice" />
+
+    <!-- 添加aop的配置 -->
+    <aop:config>
+        <!--
+        创建一个切入点
+        id  : 唯一标志
+        -->
+        <aop:pointcut id="bookPointCut" expression="execution(* com.hzhg.pojo.Book.read(..))"/>
+
+        <!--
+        创建一个切面
+         -->
+        <aop:aspect ref="bookAdvice">
+            <aop:before method="before" pointcut-ref="bookPointCut" />
+            <aop:after method="after" pointcut-ref="bookPointCut" />
+        </aop:aspect>
+    </aop:config>
 </beans>
